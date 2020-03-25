@@ -442,7 +442,7 @@ function mformsProcessActionRequest(widDef, context, actionSpec, custParms) {
                 console.log("WARN: Could not find widDef.function widDef=", lookWidDef);
                 return;
             }
-            fn = window[callFunc];
+            fn = widgActionFuncs[callFunc];
             if (typeof fn === "function") {
                 fn(lookWidDef, actionSpec, context, exParms);
             } else {
@@ -636,10 +636,21 @@ var mformTextFieldCopyAttr = {
     "jimbo": true
 };
 
+var widgActionFuncs = {
+    "client_side_search": client_side_search,
+    "saveFormChanges": saveFormChanges
+};
+
 // Add a custom rendering function to the set of 
 // pre-registered rendering functions. 
 function mformAddRenderFunc(widgetType, renderFunc) {
     widgRenderFuncs[widgetType] = renderFunc;
+}
+
+// Add a custom action function to the set of 
+// pre-registered action functions. 
+function mformAddActionFunc(widgetType, actionFunc) {
+    widgActionFuncs[widgetType] = actionFunc;
 }
 
 // Check widget defenition for missing things like
