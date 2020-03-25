@@ -2,11 +2,27 @@ Actions & Roadmap for Metadata Forms Engine
 
 # Rank Ordered Feature Work
 
+* Try a basic Drag and drop to allow quicker construction of basic screens.
+
+* For Display form consider computing the request URI for the data Object and use it as the cache element rather than using the dataObjId since the dataObjId is a rather arbitrary item and could be ambigous.
+
+* DONE:JOE:2020-02-29: A Ability for Left or Navigation to render from same Tab Menu spec with either a change of CSS or change in parameter for Meta DAta.
+
+* DONE:JOE:2020-02-29: Ability for Left or Right Navigation to render Images where the image render size can be controlled in metadata.
+
+* Fix Rendering of Dental Claim CSS seems messed up. 
+
+* DONE:JOE:2020-02-29: Left Nav should Have ability to target content into a Div.  The top nav may be contained inside that body or left nave may be contained inside the left nav.  Either containment strategy should work.
+
+* DONE:Eric: 2020-02-27: Ability for Drop down to support Multi-select 
+
+* Client side search Client Side search to easily support paging with additional metadata. Will require defining next, prev, first, last links as optional buttons.   Define server_paging as  optional in meta data and define desired page size.  Will need convention in rendering nav buttons that can render links with startoffset and number of items. 
+
 * When displaying dental claim on phone in portrait the text widgets are indented but radio buttons are not.  None should be indented on mobile devices. 
 
 * Languages & Accommodations on provider detail page should be Multi-select.  Also should default to unset if no matches are found and no default specified in form spec.
 
-* Support Checkbox Widget
+* DONE: Eric: 2020-02-25: Support Checkbox Widget
 
 * Credentialing / Educations tab.
 
